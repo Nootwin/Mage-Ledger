@@ -93,6 +93,7 @@ sprite_frames = SubResource("SpriteFrames_4ve3q")
 animation = &"jumpdown"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-1, 5)
 shape = SubResource("RectangleShape2D_qcrpm")
 
@@ -100,6 +101,7 @@ shape = SubResource("RectangleShape2D_qcrpm")
 script = ExtResource("3_qe7ec")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PhysicsSlap"]
+visible = false
 position = Vector2(-0.75, 5)
 shape = SubResource("RectangleShape2D_7qwuu")
 
