@@ -17,10 +17,11 @@ func _process(delta):
 func _input(event):
 	if (event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT):
 		if (get_overlapping_areas().has(cursor)):
-			var v = Vector2(0, -1000)
+			var v = Vector2(0, -800)
 			var angle = (global_position.x - cursor.global_position.x) / ouradius
 			v = v.rotated(angle)
 			v.y = globals.clamp_max(v.y, -500)
 			parent.nextvelocity = v
-			print(angle, v)
+			if (parent is player):
+				parent.get_node("Sprite2D").play("jumpup")
 	pass # Replace with function body.

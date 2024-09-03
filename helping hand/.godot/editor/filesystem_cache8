@@ -1,0 +1,14 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1725317765
+Cursor.gd::GDScript::-1::1725309180::0::1::::<>Area2D<>::
+Globals.gd::GDScript::-1::1725309180::0::1::::globals<>Node<>::
+icon.svg::CompressedTexture2D::2341857517417748662::1725309180::1725309211::1::::<><>::
+PhysicsSlap.gd::GDScript::-1::1725312956::0::1::::<>Area2D<>::
+Player.gd::GDScript::-1::1725314009::0::1::::player<>CharacterBody2D<>::
+player.tscn::PackedScene::3483178188756450628::1725317694::0::1::::<><>::res://Player.gd<>uid://crrgxvso7uden::::res://art/witch.png<>res://PhysicsSlap.gd
+test.tscn::PackedScene::8957497246081665276::1725317765::0::1::::<><>::uid://bpvjo24o6s077::::res://player.tscn<>res://Cursor.gd<>uid://cp3v7yewso73n::::res://art/hand.png<>uid://bcitxl6dryi1b::::res://art/dungtile.png
+::res://art/::1725317827
+dungtile-export.png::CompressedTexture2D::223448889295515364::1725317827::1725317829::1::::<><>::
+dungtile.png::CompressedTexture2D::2544508714929785349::1725317824::1725317829::1::::<><>::
+hand.png::CompressedTexture2D::5884810069087256725::1725309180::1725309211::1::::<><>::
+witch.png::CompressedTexture2D::6001552637744661121::1725313881::1725313885::1::::<><>::

@@ -1,0 +1,112 @@
+[gd_scene load_steps=14 format=3 uid="uid://bpvjo24o6s077"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_gu1mn"]
+[ext_resource type="Texture2D" uid="uid://crrgxvso7uden" path="res://art/witch.png" id="2_lgoue"]
+[ext_resource type="Script" path="res://PhysicsSlap.gd" id="3_qe7ec"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4d2e"]
+atlas = ExtResource("2_lgoue")
+region = Rect2(0, 0, 18, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5m56r"]
+atlas = ExtResource("2_lgoue")
+region = Rect2(18, 31, 24, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2c6ck"]
+atlas = ExtResource("2_lgoue")
+region = Rect2(0, 31, 18, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxh6g"]
+atlas = ExtResource("2_lgoue")
+region = Rect2(18, 0, 26, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xx2pa"]
+atlas = ExtResource("2_lgoue")
+region = Rect2(44, 0, 27, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0c3e"]
+atlas = ExtResource("2_lgoue")
+region = Rect2(71, 0, 25, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qooog"]
+atlas = ExtResource("2_lgoue")
+region = Rect2(96, 0, 26, 31)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ve3q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4d2e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5m56r")
+}],
+"loop": true,
+"name": &"jumpdown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2c6ck")
+}],
+"loop": true,
+"name": &"jumpup",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_uxh6g")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_xx2pa")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_v0c3e")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_qooog")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qcrpm"]
+size = Vector2(48, 62)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7qwuu"]
+size = Vector2(58.5, 72)
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 17
+script = ExtResource("1_gu1mn")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 5)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_4ve3q")
+animation = &"jumpdown"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 5)
+shape = SubResource("RectangleShape2D_qcrpm")
+
+[node name="PhysicsSlap" type="Area2D" parent="."]
+script = ExtResource("3_qe7ec")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PhysicsSlap"]
+position = Vector2(-0.75, 5)
+shape = SubResource("RectangleShape2D_7qwuu")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+process_callback = 0
+limit_left = 0
+limit_top = 0
+limit_bottom = 648
+limit_smoothed = true
+position_smoothing_speed = 10.0
