@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://d0vcw2uqiqyim"]
+[gd_scene load_steps=8 format=3 uid="uid://d0vcw2uqiqyim"]
 
 [ext_resource type="PackedScene" uid="uid://i6hcf8abomy2" path="res://cursor.tscn" id="3_5e3q4"]
+[ext_resource type="PackedScene" uid="uid://crywihmeng42b" path="res://ghostbarrier.tscn" id="4_65gnl"]
 [ext_resource type="PackedScene" uid="uid://bpvjo24o6s077" path="res://player.tscn" id="4_h0rj1"]
+[ext_resource type="PackedScene" uid="uid://hwt2afexm54c" path="res://lever.tscn" id="5_grtfo"]
 [ext_resource type="Texture2D" uid="uid://bcitxl6dryi1b" path="res://art/dungtile.png" id="6_ok72x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pt1b7"]
@@ -105,3 +107,10 @@ layer_0/tile_data = PackedInt32Array(720896, 262144, 2, 720897, 262144, 3, 72089
 position = Vector2(121, 572)
 
 [node name="Cursor" parent="." instance=ExtResource("3_5e3q4")]
+
+[node name="ghostbarrier" parent="." instance=ExtResource("4_65gnl")]
+layer_0/tile_data = PackedInt32Array(1179657, 196608, 2, 1114121, 196608, 1, 1048585, 196608, 1, 983049, 196608, 0)
+
+[node name="lever" parent="ghostbarrier" instance=ExtResource("5_grtfo")]
+position = Vector2(182, 256)
+rotation = 3.14159
