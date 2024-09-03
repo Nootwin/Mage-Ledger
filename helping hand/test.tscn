@@ -112,5 +112,7 @@ position = Vector2(121, 572)
 layer_0/tile_data = PackedInt32Array(1179657, 196608, 2, 1114121, 196608, 1, 1048585, 196608, 1, 983049, 196608, 0)
 
 [node name="lever" parent="ghostbarrier" instance=ExtResource("5_grtfo")]
-position = Vector2(182, 256)
+top_level = true
+position = Vector2(377, 512)
 rotation = 3.14159
+scale = Vector2(2, 2)

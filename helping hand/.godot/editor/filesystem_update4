@@ -2,5 +2,5 @@ res://test.tscn
 res://player.tscn
 res://cursor.tscn
 res://lever.tscn
-res://ghostbarrier.gd
 res://ghostbarrier.tscn
+res://ghostbarrier.gd
