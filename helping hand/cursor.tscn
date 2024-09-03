@@ -4,21 +4,21 @@
 [ext_resource type="Texture2D" uid="uid://cp3v7yewso73n" path="res://art/hand.png" id="2_fm15n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6sf7t"]
-size = Vector2(35, 20)
+size = Vector2(43, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_p35qo"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgfhn"]
 atlas = ExtResource("2_fm15n")
-region = Rect2(0, 9, 9, 17)
+region = Rect2(0, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r6jhw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxfuf"]
 atlas = ExtResource("2_fm15n")
-region = Rect2(0, 0, 17, 9)
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cn77y"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_p35qo")
+"texture": SubResource("AtlasTexture_vgfhn")
 }],
 "loop": true,
 "name": &"Slap",
@@ -26,7 +26,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_r6jhw")
+"texture": SubResource("AtlasTexture_cxfuf")
 }],
 "loop": true,
 "name": &"default",
@@ -38,7 +38,7 @@ position = Vector2(376, -2)
 script = ExtResource("1_w3t7a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 4)
+position = Vector2(2.5, 4)
 shape = SubResource("RectangleShape2D_6sf7t")
 
 [node name="Node2D" type="Node2D" parent="."]

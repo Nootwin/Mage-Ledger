@@ -13,9 +13,8 @@ func _process(delta):
 func switch(on : bool):
 	if (on):
 		modulate.a = 0.5
-		tile_set.set_physics_layer_collision_mask(0, 16)
+		tile_set.set_physics_layer_collision_layer(0, 8)
 	else:
 		modulate.a = 1
-		tile_set.set_physics_layer_collision_mask(0, 4)
-	print(tile_set.get_physics_layer_collision_mask(0))
+		tile_set.set_physics_layer_collision_layer(0, 16)
 	

@@ -31,7 +31,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ti88"]
-size = Vector2(32, 22)
+size = Vector2(28, 16)
 
 [node name="lever" type="Area2D"]
 script = ExtResource("1_dec5q")
@@ -42,5 +42,5 @@ sprite_frames = SubResource("SpriteFrames_ccira")
 animation = &"off"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 5)
+position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_1ti88")

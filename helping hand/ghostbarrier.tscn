@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://t2wfj576kbtc" path="res://art/ghostwall.png" id="1_gi5ub"]
 [ext_resource type="Script" path="res://ghostbarrier.gd" id="2_1bbn7"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e3isg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uqc57"]
 texture = ExtResource("1_gi5ub")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -69,7 +69,7 @@ texture = ExtResource("1_gi5ub")
 [sub_resource type="TileSet" id="TileSet_v2ehq"]
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 5
-sources/0 = SubResource("TileSetAtlasSource_e3isg")
+sources/4 = SubResource("TileSetAtlasSource_uqc57")
 
 [node name="ghostbarrier" type="TileMap"]
 scale = Vector2(2, 2)

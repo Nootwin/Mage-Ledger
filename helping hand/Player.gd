@@ -1,6 +1,8 @@
 class_name player extends CharacterBody2D
 
 var nextvelocity : Vector2
+@onready var healthbar = $"../CanvasLayer/TextureProgressBar"
+var health = 100
 
 const SPEED = 500.0
 const JUMP_VELOCITY = -800.0
@@ -12,6 +14,14 @@ var movementVec : Vector2
 var gravVec : Vector2
 var otherVecs : Vector2
 
+func _ready():
+	healthbar.value = 100
+
+func change_health(value):
+	health += value
+	health = globals.clamp_max(health, 100)
+	healthbar.value = health
+
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -20,6 +30,8 @@ func _physics_process(delta):
 		gravVec.y = globals.clamp_max(gravVec.y, 400)
 		if (gravVec.y + nextvelocity.y > 0):
 			$Sprite2D.play("jumpdown")
+	else:
+		change_health(0.5)
 		
 
 	# Handle jump.
