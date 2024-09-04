@@ -18,6 +18,7 @@ func change_text(txt):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	visible = true
 	add_child(timer)
 	timer.timeout.connect(_on_timer_timeout)
 	timer.one_shot = true

@@ -1,1 +1,10 @@
 res://room2.tscn
+res://test.tscn
+res://Textbox.gd
+res://player.tscn
+res://cursor.tscn
+res://lever.tscn
+res://ghostbarrier.tscn
+res://torch.tscn
+res://stairs.tscn
+res://text_area.tscn

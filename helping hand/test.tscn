@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://d0vcw2uqiqyim"]
+[gd_scene load_steps=20 format=3 uid="uid://d0vcw2uqiqyim"]
 
 [ext_resource type="PackedScene" uid="uid://bkhp646dqwnxx" path="res://torch.tscn" id="1_rbtd7"]
 [ext_resource type="PackedScene" uid="uid://i6hcf8abomy2" path="res://cursor.tscn" id="3_5e3q4"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bcitxl6dryi1b" path="res://art/dungtile.png" id="6_ok72x"]
 [ext_resource type="Texture2D" uid="uid://t2wfj576kbtc" path="res://art/ghostwall.png" id="6_pnxq6"]
 [ext_resource type="Texture2D" uid="uid://bfgr0exx8qluh" path="res://art/hearts.png" id="8_jk624"]
+[ext_resource type="PackedScene" uid="uid://tyqp1hhmelw8" path="res://room2.tscn" id="9_gg2sb"]
 [ext_resource type="PackedScene" uid="uid://dhclw2pr8tb8b" path="res://stairs.tscn" id="9_hjvgs"]
 [ext_resource type="PackedScene" uid="uid://dkku4gng8pv4g" path="res://text_area.tscn" id="10_obarg"]
 
@@ -74,7 +75,7 @@ texture = ExtResource("6_pnxq6")
 4:2/0/physics_layer_0/angular_velocity = 0.0
 4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSet" id="TileSet_6q8ro"]
+[sub_resource type="TileSet" id="TileSet_ehvwd"]
 resource_local_to_scene = true
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 5
@@ -217,7 +218,7 @@ scale = Vector2(2, 2)
 
 [node name="ghostbarrier" parent="Barriers" instance=ExtResource("4_65gnl")]
 scale = Vector2(1, 1)
-tile_set = SubResource("TileSet_6q8ro")
+tile_set = SubResource("TileSet_ehvwd")
 layer_0/tile_data = PackedInt32Array(1179657, 196608, 2, 1114121, 196608, 1, 1048585, 196608, 1, 983049, 196608, 0)
 layer_1/tile_data = PackedInt32Array(1179657, 196608, 2, 1114121, 196608, 1, 1048585, 196608, 1, 983049, 196608, 0)
 
@@ -257,7 +258,7 @@ texture = SubResource("AtlasTexture_8xaav")
 [node name="stairs" parent="." instance=ExtResource("9_hjvgs")]
 z_index = -1
 position = Vector2(2604, 575)
-nextarea = ExtResource("3_5e3q4")
+nextarea = ExtResource("9_gg2sb")
 
 [node name="textareas" type="Node2D" parent="."]
 
@@ -278,7 +279,7 @@ position = Vector2(-61.5, 33)
 shape = SubResource("RectangleShape2D_ho6hk")
 
 [node name="TileMap" type="TileMap" parent="."]
-z_index = -1
+z_index = -2
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_ga7cr")
 format = 2
