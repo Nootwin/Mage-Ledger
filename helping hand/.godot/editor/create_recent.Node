@@ -1,3 +1,4 @@
+TileMap
 Node2D
 CollisionShape2D
 Area2D
@@ -9,6 +10,5 @@ TextureProgressBar
 PointLight2D
 WorldEnvironment
 CanvasModulate
-TileMap
 AnimatedSprite2D
 StaticBody2D

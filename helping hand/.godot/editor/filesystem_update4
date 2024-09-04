@@ -1,12 +1,1 @@
-res://test.tscn
-res://player.tscn
-res://cursor.tscn
-res://lever.tscn
-res://ghostbarrier.tscn
-res://torch.tscn
-res://stairs.tscn
-res://stairs.gd
-res://Camera2D.gd
-res://Textbox.gd
-res://TextArea.gd
-res://text_area.tscn
+res://room2.tscn
