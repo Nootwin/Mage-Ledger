@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkku4gng8pv4g"]
+
+[ext_resource type="Script" path="res://TextArea.gd" id="1_rotmq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33wfe"]
+resource_local_to_scene = true
+size = Vector2(248, 100)
+
+[node name="TextArea" type="Area2D"]
+script = ExtResource("1_rotmq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_33wfe")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

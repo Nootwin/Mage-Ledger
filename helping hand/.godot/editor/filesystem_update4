@@ -3,7 +3,10 @@ res://player.tscn
 res://cursor.tscn
 res://lever.tscn
 res://ghostbarrier.tscn
-res://ghostbarrier.gd
 res://torch.tscn
-res://Player.gd
-res://PhysicsSlap.gd
+res://stairs.tscn
+res://stairs.gd
+res://Camera2D.gd
+res://Textbox.gd
+res://TextArea.gd
+res://text_area.tscn

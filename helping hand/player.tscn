@@ -1,8 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://bpvjo24o6s077"]
+[gd_scene load_steps=18 format=3 uid="uid://bpvjo24o6s077"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_gu1mn"]
 [ext_resource type="Texture2D" uid="uid://crrgxvso7uden" path="res://art/witch.png" id="2_lgoue"]
+[ext_resource type="Texture2D" uid="uid://b6tu0dkwcjfh3" path="res://art/textbox.png" id="3_8tkm1"]
 [ext_resource type="Script" path="res://PhysicsSlap.gd" id="3_qe7ec"]
+[ext_resource type="Script" path="res://Textbox.gd" id="4_da64x"]
+[ext_resource type="FontFile" uid="uid://d2qjcm34a8cbf" path="res://art/PublicPixel-E447g.ttf" id="4_fule1"]
+[ext_resource type="Script" path="res://Camera2D.gd" id="4_w164p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7hb0f"]
 atlas = ExtResource("2_lgoue")
@@ -93,6 +97,25 @@ sprite_frames = SubResource("SpriteFrames_4ve3q")
 animation = &"run"
 speed_scale = 2.0
 
+[node name="Textbox" type="Sprite2D" parent="Sprite2D"]
+z_index = 4
+position = Vector2(15, -38.5)
+texture = ExtResource("3_8tkm1")
+script = ExtResource("4_da64x")
+wantText = "See if you can get us outta here handy, maybe pull that level?"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D/Textbox"]
+z_index = 4
+texture_filter = 1
+offset_left = -41.0
+offset_top = -34.0
+offset_right = 369.0
+offset_bottom = 268.0
+scale = Vector2(0.15, 0.15)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_fule1")
+theme_override_font_sizes/normal_font_size = 32
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 5)
 shape = SubResource("RectangleShape2D_qcrpm")
@@ -112,3 +135,4 @@ limit_top = 0
 limit_bottom = 648
 limit_smoothed = true
 position_smoothing_speed = 10.0
+script = ExtResource("4_w164p")
