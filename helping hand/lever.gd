@@ -22,3 +22,4 @@ func _input(event):
 			else:
 				$Sprite2D.play("off")
 			parent.switch(on)
+			$AudioStreamPlayer2D.play()

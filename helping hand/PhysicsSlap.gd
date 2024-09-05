@@ -25,4 +25,5 @@ func _input(event):
 			if (parent is player):
 				parent.change_health(-30)
 				parent.get_node("Sprite2D").play("jumpup")
+				parent.get_node("AudioStreamPlayer2D2").play()
 	pass # Replace with function body.

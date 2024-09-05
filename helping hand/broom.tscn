@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqo52asy4ypkg"]
+
+[ext_resource type="Script" path="res://Broom.gd" id="1_i5guo"]
+[ext_resource type="Texture2D" uid="uid://x5di6yyus2l" path="res://art/broom.png" id="2_1x4ix"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qtp2w"]
+size = Vector2(64, 8)
+
+[node name="Broom" type="CharacterBody2D"]
+script = ExtResource("1_i5guo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_1x4ix")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qtp2w")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_qtp2w")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

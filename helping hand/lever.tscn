@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://hwt2afexm54c"]
+[gd_scene load_steps=8 format=3 uid="uid://hwt2afexm54c"]
 
 [ext_resource type="Script" path="res://lever.gd" id="1_dec5q"]
 [ext_resource type="Texture2D" uid="uid://dl4i2b1nsyjwa" path="res://art/lever.png" id="2_eqfws"]
+[ext_resource type="AudioStream" uid="uid://bu344sw2yx544" path="res://art/explosion (1).wav" id="3_02i5i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s7syd"]
 atlas = ExtResource("2_eqfws")
@@ -44,3 +45,6 @@ animation = &"off"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_1ti88")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_02i5i")

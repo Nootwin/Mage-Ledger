@@ -3,6 +3,7 @@ class_name player extends CharacterBody2D
 var nextvelocity : Vector2
 @onready var healthbar = $"../CanvasLayer/TextureProgressBar"
 var health = 100
+@export var firstlevel = false
 
 const SPEED = 500.0
 const JUMP_VELOCITY = -800.0
@@ -21,6 +22,8 @@ func change_health(value):
 	health += value
 	health = globals.clamp_max(health, 100)
 	healthbar.value = health
+	if (health < 1):
+		die()
 
 
 func _physics_process(delta):
@@ -56,6 +59,7 @@ func _physics_process(delta):
 	if (Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("w")) and is_on_floor():
 		$Sprite2D.play("jumpup")
 		gravVec.y = JUMP_VELOCITY
+		$AudioStreamPlayer2D.play()
 		
 	velocity = movementVec + gravVec + nextvelocity
 	if (nextvelocity):
@@ -64,5 +68,9 @@ func _physics_process(delta):
 	
 	
 	move_and_slide()
+	
+func die():
+	$"/root/Song/Song2".play()
+	get_tree().reload_current_scene()
 	
 

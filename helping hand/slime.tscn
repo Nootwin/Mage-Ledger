@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://pf7r254qyyvm"]
+
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_uwush"]
+[ext_resource type="Texture2D" uid="uid://ce3b36qb2tk1l" path="res://art/slime.png" id="2_vumy0"]
+[ext_resource type="Script" path="res://PhysicsSlap.gd" id="3_053xv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1l4om"]
+size = Vector2(64, 56)
+
+[node name="Slime" type="CharacterBody2D"]
+script = ExtResource("1_uwush")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_1l4om")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_vumy0")
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_053xv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_1l4om")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bpvjo24o6s077"]
+[gd_scene load_steps=20 format=3 uid="uid://bpvjo24o6s077"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_gu1mn"]
 [ext_resource type="Texture2D" uid="uid://crrgxvso7uden" path="res://art/witch.png" id="2_lgoue"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" path="res://Textbox.gd" id="4_da64x"]
 [ext_resource type="FontFile" uid="uid://d2qjcm34a8cbf" path="res://art/PublicPixel-E447g.ttf" id="4_fule1"]
 [ext_resource type="Script" path="res://Camera2D.gd" id="4_w164p"]
+[ext_resource type="AudioStream" uid="uid://br4x364my4dbx" path="res://art/jump.wav" id="8_xb0ri"]
+[ext_resource type="AudioStream" uid="uid://ck3de2njf5bla" path="res://art/hitHurt.wav" id="9_vk2vs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7hb0f"]
 atlas = ExtResource("2_lgoue")
@@ -137,3 +139,11 @@ limit_bottom = 648
 limit_smoothed = true
 position_smoothing_speed = 10.0
 script = ExtResource("4_w164p")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_xb0ri")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_vk2vs")

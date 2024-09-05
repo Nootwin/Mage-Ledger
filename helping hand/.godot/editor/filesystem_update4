@@ -1,6 +1,5 @@
-res://room2.tscn
+res://song.tscn
 res://test.tscn
-res://Textbox.gd
 res://player.tscn
 res://cursor.tscn
 res://lever.tscn
@@ -8,3 +7,13 @@ res://ghostbarrier.tscn
 res://torch.tscn
 res://stairs.tscn
 res://text_area.tscn
+res://room2.tscn
+res://broom.tscn
+res://slime.tscn
+res://killer.tscn
+res://song.gd
+res://Killer.gd
+res://CharacterBody2D.gd
+res://lever.gd
+res://PhysicsSlap.gd
+res://Player.gd
