@@ -1,4 +1,6 @@
-res://room2.tscn
+res://stonskin.tscn
+res://stonskin.gd
+res://lvl3.tscn
 res://test.tscn
 res://player.tscn
 res://cursor.tscn
@@ -7,6 +9,7 @@ res://ghostbarrier.tscn
 res://torch.tscn
 res://stairs.tscn
 res://text_area.tscn
+res://room2.tscn
 res://broom.tscn
 res://slime.tscn
 res://killer.tscn

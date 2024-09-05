@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dug3jt8033hsn"]
+[gd_scene load_steps=5 format=3 uid="uid://dug3jt8033hsn"]
 
 [ext_resource type="Texture2D" uid="uid://ci0qo30pvpwfc" path="res://art/stonskin.png" id="1_1tjbq"]
+[ext_resource type="Script" path="res://stonskin.gd" id="1_rokec"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iv50u"]
 size = Vector2(32, 26)
@@ -9,6 +10,7 @@ size = Vector2(32, 26)
 size = Vector2(28, 6)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_rokec")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
