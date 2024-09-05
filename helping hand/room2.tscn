@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://tyqp1hhmelw8"]
+[gd_scene load_steps=26 format=3 uid="uid://tyqp1hhmelw8"]
 
 [ext_resource type="Texture2D" uid="uid://bcitxl6dryi1b" path="res://art/dungtile.png" id="1_2vnlw"]
 [ext_resource type="PackedScene" uid="uid://bpvjo24o6s077" path="res://player.tscn" id="2_5vk1o"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dkku4gng8pv4g" path="res://text_area.tscn" id="10_8l7g5"]
 [ext_resource type="PackedScene" uid="uid://dhclw2pr8tb8b" path="res://stairs.tscn" id="11_x4qhy"]
 [ext_resource type="PackedScene" uid="uid://bwb4lkw53a4po" path="res://killer.tscn" id="12_addyp"]
+[ext_resource type="PackedScene" uid="uid://bkhp646dqwnxx" path="res://torch.tscn" id="13_y0cya"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nw78h"]
 texture = ExtResource("1_2vnlw")
@@ -430,6 +431,44 @@ position = Vector2(48, 704)
 [node name="CollisionShape2D" parent="Killer" index="0"]
 position = Vector2(1776, 1)
 shape = SubResource("RectangleShape2D_463dr")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite2D" parent="Node2D" instance=ExtResource("13_y0cya")]
+position = Vector2(83, 383)
+scale = Vector2(4, 4)
+
+[node name="Sprite2D2" parent="Node2D" instance=ExtResource("13_y0cya")]
+position = Vector2(201, 203)
+scale = Vector2(4, 4)
+
+[node name="Sprite2D3" parent="Node2D" instance=ExtResource("13_y0cya")]
+position = Vector2(80, 57)
+scale = Vector2(4, 4)
+
+[node name="Sprite2D4" parent="Node2D" instance=ExtResource("13_y0cya")]
+position = Vector2(605, 56)
+scale = Vector2(4, 4)
+
+[node name="Sprite2D5" parent="Node2D" instance=ExtResource("13_y0cya")]
+position = Vector2(1487, 60)
+scale = Vector2(4, 4)
+
+[node name="Sprite2D6" parent="Node2D" instance=ExtResource("13_y0cya")]
+position = Vector2(2029, 60)
+scale = Vector2(4, 4)
+
+[node name="Sprite2D7" parent="Node2D" instance=ExtResource("13_y0cya")]
+position = Vector2(2143, 554)
+scale = Vector2(4, 4)
+
+[node name="Sprite2D8" parent="Node2D" instance=ExtResource("13_y0cya")]
+position = Vector2(2398, 217)
+scale = Vector2(4, 4)
+
+[node name="Sprite2D9" parent="Node2D" instance=ExtResource("13_y0cya")]
+position = Vector2(2873, 215)
+scale = Vector2(4, 4)
 
 [editable path="Brooms/Broom"]
 [editable path="Brooms/Broom2"]
