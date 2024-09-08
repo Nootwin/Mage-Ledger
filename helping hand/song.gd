@@ -1,4 +1,4 @@
-extends AudioStreamPlayer2D
+extends AudioStreamPlayer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -9,6 +9,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-	
-func _physics_process(delta):
-	global_position = $"/root/Node2D/Player".global_position
+
+
+func _on_finished():
+	play()

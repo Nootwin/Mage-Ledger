@@ -71,6 +71,6 @@ func _physics_process(delta):
 	
 func die():
 	$"/root/Song/Song2".play()
-	get_tree().reload_current_scene()
+	get_tree().call_deferred("reload_current_scene")
 	
 

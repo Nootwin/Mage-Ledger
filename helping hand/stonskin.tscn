@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ci0qo30pvpwfc" path="res://art/stonskin.png" id="1_1tjbq"]
 [ext_resource type="Script" path="res://stonskin.gd" id="1_rokec"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iv50u"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aaol8"]
 size = Vector2(32, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pc5xg"]
@@ -14,7 +14,7 @@ script = ExtResource("1_rokec")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
-shape = SubResource("RectangleShape2D_iv50u")
+shape = SubResource("RectangleShape2D_aaol8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
@@ -25,3 +25,9 @@ texture = ExtResource("1_1tjbq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -13)
 shape = SubResource("RectangleShape2D_pc5xg")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

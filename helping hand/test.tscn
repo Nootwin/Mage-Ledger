@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://d0vcw2uqiqyim"]
+[gd_scene load_steps=25 format=3 uid="uid://d0vcw2uqiqyim"]
 
 [ext_resource type="PackedScene" uid="uid://bkhp646dqwnxx" path="res://torch.tscn" id="1_rbtd7"]
 [ext_resource type="PackedScene" uid="uid://i6hcf8abomy2" path="res://cursor.tscn" id="3_5e3q4"]
@@ -7,13 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://hwt2afexm54c" path="res://lever.tscn" id="5_grtfo"]
 [ext_resource type="Texture2D" uid="uid://bcitxl6dryi1b" path="res://art/dungtile.png" id="6_ok72x"]
 [ext_resource type="Texture2D" uid="uid://t2wfj576kbtc" path="res://art/ghostwall.png" id="6_pnxq6"]
+[ext_resource type="PackedScene" uid="uid://bjhioa4ky0kjn" path="res://timer.tscn" id="8_23wa4"]
 [ext_resource type="Texture2D" uid="uid://bfgr0exx8qluh" path="res://art/hearts.png" id="8_jk624"]
 [ext_resource type="PackedScene" uid="uid://tyqp1hhmelw8" path="res://room2.tscn" id="9_gg2sb"]
 [ext_resource type="PackedScene" uid="uid://dhclw2pr8tb8b" path="res://stairs.tscn" id="9_hjvgs"]
 [ext_resource type="PackedScene" uid="uid://dkku4gng8pv4g" path="res://text_area.tscn" id="10_obarg"]
 [ext_resource type="PackedScene" uid="uid://bwb4lkw53a4po" path="res://killer.tscn" id="12_5ijqr"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e3isg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x8q46"]
 texture = ExtResource("6_pnxq6")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -80,9 +81,9 @@ texture = ExtResource("6_pnxq6")
 resource_local_to_scene = true
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 5
-sources/0 = SubResource("TileSetAtlasSource_e3isg")
+sources/0 = SubResource("TileSetAtlasSource_x8q46")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2cugr"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fp213"]
 texture = ExtResource("6_pnxq6")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -149,7 +150,7 @@ texture = ExtResource("6_pnxq6")
 resource_local_to_scene = true
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 5
-sources/0 = SubResource("TileSetAtlasSource_2cugr")
+sources/0 = SubResource("TileSetAtlasSource_fp213")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pbxwf"]
 atlas = ExtResource("8_jk624")
@@ -266,21 +267,27 @@ scale = Vector2(2, 2)
 
 [node name="Sprite2D3" parent="torches" instance=ExtResource("1_rbtd7")]
 position = Vector2(210.5, 159)
+scale = Vector2(1, 1)
 
 [node name="Sprite2D" parent="torches" instance=ExtResource("1_rbtd7")]
 position = Vector2(128, 256)
+scale = Vector2(1, 1)
 
 [node name="Sprite2D2" parent="torches" instance=ExtResource("1_rbtd7")]
 position = Vector2(352.5, 256)
+scale = Vector2(1, 1)
 
 [node name="Sprite2D4" parent="torches" instance=ExtResource("1_rbtd7")]
 position = Vector2(646, 163.5)
+scale = Vector2(1, 1)
 
 [node name="Sprite2D5" parent="torches" instance=ExtResource("1_rbtd7")]
 position = Vector2(956, 167)
+scale = Vector2(1, 1)
 
 [node name="Sprite2D6" parent="torches" instance=ExtResource("1_rbtd7")]
 position = Vector2(1115.5, 257)
+scale = Vector2(1, 1)
 
 [node name="Player" parent="." instance=ExtResource("4_h0rj1")]
 position = Vector2(121, 572)
@@ -315,14 +322,13 @@ position = Vector2(353, 192)
 color = Color(0.501961, 0.501961, 0.501961, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-scale = Vector2(2, 2)
-transform = Transform2D(2, 0, 0, 2, 0, 0)
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer"]
 offset_left = 14.0
 offset_top = 13.0
 offset_right = 46.0
 offset_bottom = 45.0
+scale = Vector2(2, 2)
 value = 20.0
 fill_mode = 3
 texture_progress = SubResource("AtlasTexture_pbxwf")
@@ -330,6 +336,12 @@ texture_progress = SubResource("AtlasTexture_pbxwf")
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/TextureProgressBar"]
 position = Vector2(16.4, 12)
 texture = SubResource("AtlasTexture_8xaav")
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("8_23wa4")]
+offset_left = 993.0
+offset_top = 10.0
+offset_right = 993.0
+offset_bottom = 10.0
 
 [node name="stairs" parent="." instance=ExtResource("9_hjvgs")]
 z_index = -1

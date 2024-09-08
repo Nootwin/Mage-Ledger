@@ -1,12 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://drcr46x5ic07y"]
+[gd_scene load_steps=4 format=3 uid="uid://drcr46x5ic07y"]
 
 [ext_resource type="AudioStream" uid="uid://dv8lycruhahj8" path="res://helpinghands.wav" id="1_wcmdl"]
 [ext_resource type="AudioStream" uid="uid://eobe6i72k5qb" path="res://art/explosion (2).wav" id="2_0ivvy"]
+[ext_resource type="Script" path="res://song.gd" id="2_d7c6p"]
 
 [node name="Song" type="AudioStreamPlayer"]
 stream = ExtResource("1_wcmdl")
 volume_db = -10.207
-autoplay = true
+script = ExtResource("2_d7c6p")
 
 [node name="Song2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_0ivvy")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

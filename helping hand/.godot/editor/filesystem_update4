@@ -1,6 +1,7 @@
-res://stonskin.tscn
+res://menu.tscn
 res://stonskin.gd
-res://lvl3.tscn
+res://song.tscn
+res://startbutton.gd
 res://test.tscn
 res://player.tscn
 res://cursor.tscn
@@ -13,4 +14,7 @@ res://room2.tscn
 res://broom.tscn
 res://slime.tscn
 res://killer.tscn
-res://song.tscn
+res://lvl3.tscn
+res://stonskin.tscn
+res://timer.tscn
+res://credits.tscn
